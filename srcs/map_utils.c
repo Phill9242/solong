@@ -6,7 +6,7 @@
 /*   By: phiolive <phiolive@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 08:36:56 by phil              #+#    #+#             */
-/*   Updated: 2022/01/14 14:08:07 by phiolive         ###   ########.fr       */
+/*   Updated: 2022/01/14 12:29:08 by phiolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ void	ft_map_validate(t_mainstruct game)
 	ft_free (game.map->map_pos);
 	game.map->map_pos = ft_split (game.map->str, '\n');
 	game.map->map_null = 1;
-	if (!ft_check_if_is_surrounded_by_walls (game))
+	if (!ft_check_if_is_surrounded_by_walls (game)
+		|| game.map->str[0] != '1')
 	{
 		printf ("ERROR\nThe map must be surrounded_by_walls!\n");
 		ft_exit (&game);
