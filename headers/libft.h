@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: phil <phil@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/14 08:24:45 by phil              #+#    #+#             */
+/*   Updated: 2022/01/14 08:28:43 by phil             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
 
-#  define BUFFER_SIZE 10
-#  define OPEN_MAX 256
+# define BUFFER_SIZE 10
+# define OPEN_MAX 256
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
