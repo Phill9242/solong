@@ -53,11 +53,6 @@ $(OBJS_PATH)%.o : $(SRCS_PATH)%.c
 # -> mandatory flag for project submission
 bonus: all
 
-# RUN
-
-run: $(NAME)
-	@$(NAME) $(MAP)
-
 valgrind: $(NAME)
 	@$(VALGRIND)
 

@@ -6,7 +6,7 @@
 /*   By: phiolive <phiolive@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 08:36:59 by phil              #+#    #+#             */
-/*   Updated: 2022/01/14 14:17:24 by phiolive         ###   ########.fr       */
+/*   Updated: 2022/01/14 12:39:20 by phiolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ void	ft_map_str(t_mainstruct game, char *map)
 		map_str = ft_cpy_and_increase (map_str);
 		read_size = read (fd, &map_str[ft_strlen(map_str)], BUFFER_SIZE);
 	}
+	if (map_str[0] != '1')
+		ft_exit(&game);
 	game.map->str = map_str;
 	ft_window_size (game);
 }
